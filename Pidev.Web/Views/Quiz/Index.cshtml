@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Pidev.Domaine.Entities.Quiz>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FormationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Score)
+        </th>
+        <th>
+            Etat
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.QuizId }) |
+                @Html.ActionLink("Create Question", "../Question/Create", new { id = item.QuizId }) |
+                @Html.ActionLink("Passer Quiz", "../Question/PasserQuiz", new { id = item.QuizId }) |
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.QuizId })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Print PDF", "Export") |
+@Html.ActionLink("Show Statistics", "Statistique") |

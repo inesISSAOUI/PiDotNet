@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Pidev.Domaine.Entities.Question>
+
+@{
+    ViewBag.Title = "PasserQuiz";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+    int uv = 0;
+}
+
+<h2>PasserQuiz</h2>
+
+@using (Html.BeginForm("ValiderQuiz", "Question", FormMethod.Post))
+{
+    <center>
+
+
+
+        <div>
+            @foreach (var item in Model)
+            {
+                if (uv == 0)
+                {
+                    <h4>
+                        Veuillez Cocher
+                        @Html.RadioButton("ido", @Html.DisplayFor(modelItem => item.QuizId), new { @checked = true })
+                        la bonne réponse
+                    </h4>
+                }
+                i++;
+                uv++;
+
+                String qn = "response" + i;
+                String qc = "responsec" + i;
+                @Html.DisplayFor(modelItem => item.QuestionDescription) <br />
+                //<input type="radio" name="reponse" value="reponse c" />
+                @Html.RadioButton(@qn, @Html.DisplayFor(modelItem => item.Question1stSuggestion));
+
+                @Html.DisplayFor(modelItem => item.Question1stSuggestion)<br />
+                //<input type="radio" name="reponse" value=" reponse f1" />
+                @Html.RadioButton(@qn, @Html.DisplayFor(modelItem => item.Question2ndSuggestion))
+
+
+                @Html.DisplayFor(modelItem => item.Question2ndSuggestion)<br />
+                // <input type="radio" name="reponse" value="reponse f2" />
+                @Html.RadioButton(@qn, @Html.DisplayFor(modelItem => item.Question3rdSuggestion))
+
+
+                @Html.DisplayFor(modelItem => item.Question3rdSuggestion) <br />
+
+            }
+        </div>
+        <input type="submit" class="btn btn-primary py-2" value="Valider" />
+    </center>
+}
+

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Pidev.Domaine.Entities.Quiz>
+
+@{
+    ViewBag.Title = "Statistique";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Statistique</h2>
+
+
+
+@{
+    
+    var myChart = new Chart(width: 600, height: 400).AddTitle("Chart Quizs");
+    int v = 0;
+    int ux = 0;
+    int ur = 0;
+}
+
+
+
+
+@foreach (var item in Model)
+{
+
+    if (@Html.DisplayFor(modelItem => item.Type).ToString() == "En cours")
+    { v++; }
+    if (@Html.DisplayFor(modelItem => item.Type).ToString() == "Valider")
+    { ux++; }
+    if (@Html.DisplayFor(modelItem => item.Type).ToString() == "Rejeter")
+    { ur++; }
+
+}
+
+
+
+
+
+@{myChart
+                              .AddSeries(
+                                  name: "Quizs",
+                                  xValue: new[] { "In progress", "Validate", "Reject" },
+                  yValues: new[] { v, ux, ur });
+
+    myChart.Write(); }
