@@ -1,0 +1,48 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="<width=device-width" />
+    <title></title>
+</head>
+<body>
+    <a href="@Url.Action("Create","formations")">Add new formation</a>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>description</th>
+                    <th>dureé</th>
+                    <th>Nombre de place</th>
+                    <th>Nom formation</th>
+                </tr>
+            </thead>
+            @foreach (var p in ViewBag.result)
+            {
+                <tr>
+                    <td>@p.id</td>
+                    <td>@p.description</td>
+                    <td>@p.duration</td>
+                    <td>@p.nbPlaceDispo</td>
+                    <td>@p.nomFormation</td>
+                    <td>@Html.ActionLink("Create Quiz", "../Quiz/CreateQuiz", new { id = p.id })  </td>
+                    <td>
+                        @{ int id = @p.id;}
+
+                        <a href="@Url.Action("Delete", "formation",new {id=@p.id})" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+
+
+
+</body>
+</html>
+
