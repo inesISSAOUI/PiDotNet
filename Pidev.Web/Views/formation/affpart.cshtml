@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="<width=device-width" />
+    <title></title>
+</head>
+<body>
+    <a href="@Url.Action("Create","formations")">add new formation</a>
+
+    <table cellpadding="2" cellspacing="1">
+        <tr>
+            <th>ID</th>
+            <th>description</th>
+            <th>dureé</th>
+            <th>Nombre de place</th>
+            <th>Nom formation</th>
+        </tr>
+        @foreach (var p in ViewBag.result)
+        {
+            <tr>
+                <td>@p.id</td>
+                <td>@p.description</td>
+                <td>@p.duration</td>
+                <td>@p.nbPlaceDispo</td>
+                <td>@p.nomFormation</td>
+                <td>@Html.ActionLink("Create Quiz", "../Quiz/CreateQuiz", new { id = p.id }) </td>
+
+            </tr>
+        }
+
+    </table>
+
+
+
+
+</body>
+</html>
+
