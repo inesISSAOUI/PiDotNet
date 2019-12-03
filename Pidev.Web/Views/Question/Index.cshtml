@@ -5,7 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<<<<<<< HEAD
 <h2>Question</h2>
+=======
+<h2>Index</h2>
+>>>>>>> 678b98184b9014ffec345fdcbc9e22ea970c7a2d
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -33,6 +37,7 @@
         <th></th>
     </tr>
 
+<<<<<<< HEAD
     @foreach (var item in Model)
     {
         <tr>
@@ -61,5 +66,34 @@
             </td>
         </tr>
     }
+=======
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuizId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question1stSuggestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question2ndSuggestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question3rdSuggestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionCorrectAnswer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.QuestionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.QuestionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.QuestionId })
+        </td>
+    </tr>
+}
+>>>>>>> 678b98184b9014ffec345fdcbc9e22ea970c7a2d
 
 </table>

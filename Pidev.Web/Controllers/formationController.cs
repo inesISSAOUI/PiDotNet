@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Mvc;
 using Pidev.Data;
+using Pidev.Web.Models;
 
 namespace Pidev.Web.Controllers
 {
@@ -20,7 +21,7 @@ namespace Pidev.Web.Controllers
             HttpResponseMessage response = Client.GetAsync("http://localhost:9080/pidev-web/api/formations").Result;
             if (response.IsSuccessStatusCode)
             {
-                ViewBag.result = response.Content.ReadAsAsync<IEnumerable<formation>>().Result;
+                ViewBag.result = response.Content.ReadAsAsync<IEnumerable<Data.formation>>().Result;
 
             }
             else
@@ -46,6 +47,24 @@ namespace Pidev.Web.Controllers
         {
 
             return View();
+
+        }
+
+        public ActionResult ajout()
+        {
+            return View("ajoutfor");
+        }
+
+        public ActionResult ajout(Data.formation f)
+        {
+            HttpClient client = new HttpClient();
+
+
+            client.PostAsJsonAsync<Data.formation>("http://localhost:9080/pidev-web/api/formations", f).ContinueWith((postTask) => postTask.Result.EnsureSuccessStatusCode());
+            return RedirectToAction("ajoutfor");
+
+
+
 
         }
     }
