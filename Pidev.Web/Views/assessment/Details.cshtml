@@ -1,0 +1,66 @@
+﻿@model Advyteam.Models.assessment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>assessment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.employee.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employee.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.done360)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.done360)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doneSelf)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doneSelf)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resultAssesment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resultAssesment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scoreGlobal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scoreGlobal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idAssessment }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

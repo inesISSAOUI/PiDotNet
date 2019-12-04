@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <a href="@Url.Action("Create","Criteria")">add new Criteria</a>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        @foreach(var p in ViewBag.result)
+        {
+        <tr>
+            <td>@p.idCriteria</td>
+            <td>@p.name</td>
+            <td>@p.description</td>
+
+            @if (p.idCriteria > 12)
+            {
+
+            <td>@Html.ActionLink("Delete", "Delete", new { id = p.idCriteria },new { onclick= "return confirm('Are you sure you wish to delete this criteria?');" } ) </td>
+
+
+            }
+
+        </tr>
+        }
+    </table>
+</body>

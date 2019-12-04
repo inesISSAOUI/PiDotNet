@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Advyteam.Models.assessment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.employee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.done360)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doneSelf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resultAssesment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scoreGlobal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.done360)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doneSelf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resultAssesment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scoreGlobal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idAssessment }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idAssessment }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idAssessment })
+        </td>
+    </tr>
+}
+
+</table>
