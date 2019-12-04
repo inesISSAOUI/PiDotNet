@@ -66,10 +66,10 @@ namespace Pidev.Web.Controllers
                 client.Send(message1);
                 client.Disconnect(true);
             }
-          /*  // Use your account SID and authentication token instead
+           // Use your account SID and authentication token instead
             // of the placeholders shown here.
-            const string accountSID = "ACcb5274125fc2ebcbc47aef71d5738ac4";
-            const string authToken = "429ff7a2f0c90a0800d964bfbd1830e4";
+            const string accountSID = "AC112bf29cc2ba0b15cd7ea143a03ec786";
+            const string authToken = "fc2060027600fdb5558b01670e6a2e39";
 
             // Initialize the TwilioClient.
             TwilioClient.Init(accountSID, authToken);
@@ -84,7 +84,7 @@ namespace Pidev.Web.Controllers
                 // Send an SMS message.
                 var message = MessageResource.Create(
                     to: new PhoneNumber("+21621646533"),
-                    from: new PhoneNumber("+15628884113"),
+                    from: new PhoneNumber("+14243659381"),
                      body: "Your application has been validated successfully \nThe " + DateTime.Now + "\n We will come back to you in order to pass your quiz \n Best regards.");
             }
             catch (TwilioException ex)
@@ -92,7 +92,7 @@ namespace Pidev.Web.Controllers
                 // An exception occurred making the REST call
                 Console.WriteLine(ex.Message);
             }
-            */
+            
             return RedirectToAction("Index");
         }
 
@@ -176,6 +176,7 @@ namespace Pidev.Web.Controllers
                    FileName = Server.MapPath("~/Content/PDF/Liste.pdf")
                };
            }
+
            public ActionResult Statistique()
            {
                return View(Ps.GetMany());

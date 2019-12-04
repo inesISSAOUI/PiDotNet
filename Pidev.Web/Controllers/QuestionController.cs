@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Pidev.Domaine.Entities;
 using Pidev.Service;
+using Rotativa.MVC;
 
 namespace Pidev.Web.Controllers
 {
@@ -209,20 +210,15 @@ namespace Pidev.Web.Controllers
                 return View();
             }
         }
-        /* public ActionResult Export()
+         public ActionResult Export()
          {
              return new ActionAsPdf("Index")
              {
                  FileName = Server.MapPath("~/Content/PDF/Liste.pdf")
              };
          }
-         public ActionResult Statistique()
-         {
-             return View(Ps.GetMany());
-         }
+       
 
      }
-     */
-    }
+        }
 
-}

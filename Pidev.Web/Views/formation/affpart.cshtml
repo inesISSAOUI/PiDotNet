@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 ﻿
 
 <!DOCTYPE html>
-=======
-﻿<!DOCTYPE html>
->>>>>>> 678b98184b9014ffec345fdcbc9e22ea970c7a2d
 
 <html>
 <head>
@@ -12,7 +8,6 @@
     <title></title>
 </head>
 <body>
-<<<<<<< HEAD
     <a href="@Url.Action("Create","formations")">Add new formation</a>
     <div class="card-body">
         <table class="table">
@@ -44,32 +39,6 @@
 
         </table>
     </div>
-=======
-    <a href="@Url.Action("Create","formations")">add new formation</a>
-
-    <table cellpadding="2" cellspacing="1">
-        <tr>
-            <th>ID</th>
-            <th>description</th>
-            <th>dureé</th>
-            <th>Nombre de place</th>
-            <th>Nom formation</th>
-        </tr>
-        @foreach (var p in ViewBag.result)
-        {
-            <tr>
-                <td>@p.id</td>
-                <td>@p.description</td>
-                <td>@p.duration</td>
-                <td>@p.nbPlaceDispo</td>
-                <td>@p.nomFormation</td>
-                <td>@Html.ActionLink("Create Quiz", "../Quiz/CreateQuiz", new { id = p.id }) </td>
-
-            </tr>
-        }
-
-    </table>
->>>>>>> 678b98184b9014ffec345fdcbc9e22ea970c7a2d
 
 
 

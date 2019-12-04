@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Pidev.Web.Models
 {
-    public class formation
+    public class formationModels
     {
         public int id { get; set; }
 
@@ -16,8 +16,6 @@ namespace Pidev.Web.Models
         public string duration { get; set; }
 
         public int nbPlaceDispo { get; set; }
-
-        public string nomFormation { get; set; }
 
 
 

@@ -190,6 +190,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\formation.cs" />
+    <Compile Include="Models\formationModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -289,6 +290,7 @@
     <Content Include="Views\Question\Edit.cshtml" />
     <Content Include="Views\Question\PasserQuiz.cshtml" />
     <Content Include="Views\Quiz\Statistique.cshtml" />
+    <Content Include="Views\formation\ajoutfor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

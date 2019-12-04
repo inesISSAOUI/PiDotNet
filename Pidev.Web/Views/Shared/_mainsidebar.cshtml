@@ -6,5 +6,95 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         @Html.Partial("_partialsidebar")
     </section>
+    
+    <!-- START Sidebar (left)-->
+    <div class="aside-inner">
+        <nav class="sidebar" data-sidebar-anyclick-close="">
+            <!-- START sidebar nav-->
+            <ul class="sidebar-nav">
+                <!-- START user info-->
+                <li class="has-user-block">
+                    <div class="collapse" id="user-block">
+                        <div class="item user-block">
+                            <!-- User picture-->
+                            <div class="user-block-picture">
+                                <div class="user-block-status">
+                                    <img class="img-thumbnail rounded-circle" src=@Url.Content("/Content/img/user/02.jpg")
+                                         alt="Avatar" width="60" height="60" />
+                                    <div class="circle bg-success circle-lg"></div>
+                                </div>
+                            </div>
+                            <!-- Name and Job-->
+                            <div class="user-block-info">
+                                <span class="user-block-name">Hello, Mike</span><span class="user-block-role">Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- END user info-->
+                <!-- Iterates over all sidebar items-->
+                <li class="nav-heading ">
+                    <span data-localize="sidebar.heading.HEADER"></span>
+                </li>
+
+
+
+
+                <li class=" ">
+                    <a href="#elements" title="Elements"
+                       data-toggle="collapse">
+                        <em class="icon-chemistry"></em><span data-localize="sidebar.nav.element.ELEMENTS">Formation</span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-subnav collapse" id="elements">
+                        <li class="sidebar-subnav-header"></li>
+                        <li class=" ">
+                            <a href="../Quiz/Index" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON"> Quiz</span>
+                            </a>
+                        </li>
+
+                        <li class=" ">
+                            <a href="../Question/Index" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON">Question</span>
+                            </a>
+                        </li>
+
+
+                        <li class=" ">
+                            <a href="../formation/affpart" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON">Afficher Formation</span>
+                            </a>
+                        </li>
+
+                        <li class=" ">
+                            <a href="demande-mission-manager.jsf" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON">Demande (Manager)</span>
+                            </a>
+                        </li>
+
+                        <li class=" ">
+                            <a href="preuve-mission.jsf" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON">Preuve Mission</span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="frais-par-mission.jsf" title="Buttons">
+                                <span data-localize="sidebar.nav.element.BUTTON">Frais/Mission</span>
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+            <!-- END sidebar nav-->
+        </nav>
+    </div>
     <!-- /.sidebar -->
 </aside>
