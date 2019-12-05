@@ -1,0 +1,48 @@
+﻿@model IEnumerable<test_data.Competance>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Description
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            type
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.result)
+    {
+<tr>
+    <td>
+        @item.description
+    </td>
+    <td>
+        @item.name
+    </td>
+    <td>
+        @item.type
+    </td>
+    <td>
+       |
+        @Html.ActionLink("Delete", "Delete", new { id = item.id })|
+       
+
+    </td>
+</tr>
+    }
+
+</table>

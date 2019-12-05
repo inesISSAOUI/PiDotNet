@@ -1,0 +1,37 @@
+﻿@model IEnumerable<test_data.niveauxmat>
+@{
+    ViewBag.Title = "ListComp";
+}
+
+<h2>ListComp</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.competance.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.matricecomp.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Niveaux)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.competance.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.matricecomp.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Niveaux)
+            </td>
+            
+        </tr>
+    }
+
+</table>

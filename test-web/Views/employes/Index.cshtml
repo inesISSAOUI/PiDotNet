@@ -1,0 +1,52 @@
+﻿@model IEnumerable<test_data.employe>
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            fiche Metier
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fichemetier.category)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+               
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })} |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })|
+                @Html.ActionLink("VoirList", "VoirList", new { id = item.Id })
+                 
+            </td>
+        </tr>
+    }
+
+</table>

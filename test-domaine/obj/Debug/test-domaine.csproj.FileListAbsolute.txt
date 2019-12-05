@@ -1,0 +1,12 @@
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\test-domaine.dll
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\test-domaine.pdb
+C:\Users\houss\source\repos\test\test-domaine\obj\Debug\test-domaine.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\test\test-domaine\obj\Debug\test-domaine.dll
+C:\Users\houss\source\repos\test\test-domaine\obj\Debug\test-domaine.pdb
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\test-domaine.dll.config
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\EntityFramework.dll
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\EntityFramework.xml
+C:\Users\houss\source\repos\test\test-domaine\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\houss\source\repos\test\test-domaine\obj\Debug\test-domaine.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\test\test-domaine\obj\Debug\test-domaine.csproj.CopyComplete

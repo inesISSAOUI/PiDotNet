@@ -1,0 +1,14 @@
+C:\Users\houss\source\repos\test\test-data\bin\Debug\test-data.dll.config
+C:\Users\houss\source\repos\test\test-data\bin\Debug\test-data.dll
+C:\Users\houss\source\repos\test\test-data\bin\Debug\test-data.pdb
+C:\Users\houss\source\repos\test\test-data\bin\Debug\EntityFramework.dll
+C:\Users\houss\source\repos\test\test-data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\houss\source\repos\test\test-data\bin\Debug\MySql.Data.dll
+C:\Users\houss\source\repos\test\test-data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\houss\source\repos\test\test-data\bin\Debug\EntityFramework.xml
+C:\Users\houss\source\repos\test\test-data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\houss\source\repos\test\test-data\obj\Debug\test-data.csprojAssemblyReference.cache
+C:\Users\houss\source\repos\test\test-data\obj\Debug\test-data.csproj.CoreCompileInputs.cache
+C:\Users\houss\source\repos\test\test-data\obj\Debug\test-data.csproj.CopyComplete
+C:\Users\houss\source\repos\test\test-data\obj\Debug\test-data.dll
+C:\Users\houss\source\repos\test\test-data\obj\Debug\test-data.pdb

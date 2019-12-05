@@ -1,0 +1,67 @@
+﻿@model IEnumerable<test_data.employe>
+
+@{
+    ViewBag.Title = "VoirListeDemande";
+}
+
+<h2>VoirListeDemande</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fichemetier.category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.matricecomp.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.demande)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prenom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fichemetier.category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.matricecomp.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.demande)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+           
+            @Html.ActionLink("traiter", "traiter", new { id=item.Id })
+            
+        </td>
+    </tr>
+}
+
+</table>
