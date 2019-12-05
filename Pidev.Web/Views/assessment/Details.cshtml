@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿@model Advyteam.Models.assessment
+=======
+﻿@model Domain.Entities.assessment
+>>>>>>> Stashed changes
 
 @{
     ViewBag.Title = "Details";
@@ -11,6 +15,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
+<<<<<<< Updated upstream
             @Html.DisplayNameFor(model => model.employee.firstName)
         </dt>
 
@@ -19,6 +24,8 @@
         </dd>
 
         <dt>
+=======
+>>>>>>> Stashed changes
             @Html.DisplayNameFor(model => model.done360)
         </dt>
 
@@ -58,9 +65,24 @@
             @Html.DisplayFor(model => model.type)
         </dd>
 
+<<<<<<< Updated upstream
+=======
+        <dt>
+            @Html.DisplayNameFor(model => model.employee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.employee.firstName)
+        </dd>
+
+>>>>>>> Stashed changes
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.idAssessment }) |
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     @Html.ActionLink("Back to List", "Index")
 </p>

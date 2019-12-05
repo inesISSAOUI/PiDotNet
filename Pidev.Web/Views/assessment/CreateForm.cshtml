@@ -1,0 +1,75 @@
+﻿@model Advyteam.Models.CriteriasToAssess
+
+@{
+    ViewBag.Title = "CreateForm";
+}
+
+<h2>Form Assessment</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+<div class="card">
+    <div class="card-body">
+        <div class="form-horizontal">
+            <h4>CriteriasToAssess</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                Analytical thinking<br />
+                The ability to analyse, investigate & interpret data, issues &  situations.<br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.score1, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.score1, "range must be 1-5", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Motivation<br />
+                The ability to support and encourage individuals and teams,  so that they give of their best.<br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.score2, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.score2, "range must be 1-5", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Developing self<br />
+                The ability to focus on own development and to take action  to learn.<br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.score3, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.score3, "range must be 1-5", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Adaptability/Change Management <br />
+                The ability to respond & adapt to changing circumstances  and to manage, solve problems and provide solutions in a  climate of ambiguity. <br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.score4, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.score4, "range must be 1-5", new { @class = "text -danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                Team Working <br />
+                The ability to contribute to teams and to improve their  effectiveness through personal commitment.<br />
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.score5, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.score5, "range must be 1-5", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

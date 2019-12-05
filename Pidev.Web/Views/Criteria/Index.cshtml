@@ -4,6 +4,7 @@
     <title></title>
 </head>
 <body>
+<<<<<<< Updated upstream
     <a href="@Url.Action("Create","Criteria")">add new Criteria</a>
     <table cellpadding="2" cellspacing="2" border="1">
         <tr>
@@ -38,4 +39,52 @@
         </tr>
         }
     </table>
+=======
+    <div class="card">
+        <div class="card-body">
+            <a class="btn btn-primary" href="@Url.Action("Create","Criteria")">add new Criteria</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in ViewBag.result)
+                    {
+                        <tr>
+                            <td>@p.name</td>
+                            <td>@p.description</td>
+
+
+                            @if (p.idCriteria > 12)
+                            {
+
+                                <td>@Html.ActionLink("Delete", "Delete", new { id = p.idCriteria }, new { @class = "btn btn-danger", onclick = "return confirm('Are you sure you wish to delete this criteria?');" }) </td>
+
+
+                            }
+                            @if (p.idCriteria < 13)
+                            {
+
+                                <td>@Html.ActionLink("Delete", "Delete", new { id = p.idCriteria }, new { @class = "btn btn-secondary disabled", onclick = "return false;" }) </td>
+
+
+                            }
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+>>>>>>> Stashed changes
 </body>

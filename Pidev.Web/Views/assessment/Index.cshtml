@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿@model IEnumerable<Advyteam.Models.assessment>
+=======
+﻿@model IEnumerable<Domain.Entities.assessment>
+>>>>>>> Stashed changes
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +16,11 @@
 <table class="table">
     <tr>
         <th>
+<<<<<<< Updated upstream
             @Html.DisplayNameFor(model => model.employee)
+=======
+            @Html.DisplayNameFor(model => model.employee.firstName)
+>>>>>>> Stashed changes
         </th>
         <th>
             @Html.DisplayNameFor(model => model.done360)
@@ -53,9 +61,24 @@
             @Html.DisplayFor(modelItem => item.type)
         </td>
         <td>
+<<<<<<< Updated upstream
             @Html.ActionLink("Edit", "Edit", new { id=item.idAssessment }) |
             @Html.ActionLink("Details", "Details", new { id=item.idAssessment }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.idAssessment })
+=======
+            @Html.ActionLink("Edit", "Edit", new { id = item.idAssessment }) |
+            @Html.ActionLink("Details", "Details", new { id = item.idAssessment }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.idAssessment })
+            @if (!item.doneSelf)
+            {
+                @Html.ActionLink("Do Assessment", "CreateForm", new { id = item.idAssessment })
+            }
+            @if (item.doneSelf)
+            {
+                @Html.ActionLink("Choose Result", "Edit2", new { id = item.idAssessment })
+            }
+
+>>>>>>> Stashed changes
         </td>
     </tr>
 }

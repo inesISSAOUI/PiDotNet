@@ -1,0 +1,44 @@
+﻿<h2>Choose Criterias</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>criterias</h4>
+    <hr />
+    
+    <div class="form-group">
+        <div class="col-md-10">
+
+            <select id='criteriascoreselfL' multiple='multiple'>
+                @foreach (var item in ViewBag.criteria)
+                {
+                    <option value='@item.idCriteria'>@item.name</option>
+                }
+            </select>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="CreateCriteriaScores" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+<script src="~/Content/js/jquery.multi-select.js"></script>
+<script type="text/javascript">
+    // run pre selected options
+    $('#criteriascoreselfL').multiSelect();
+</script>
+
+

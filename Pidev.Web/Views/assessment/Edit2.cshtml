@@ -1,108 +1,70 @@
-<<<<<<< Updated upstream
-﻿@model Advyteam.Models.assessment
-=======
 ﻿@model Domain.Entities.assessment
->>>>>>> Stashed changes
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
-<h2>Create</h2>
+<h2>Choose Result</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>assessment</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-<<<<<<< Updated upstream
-        <div class="form-group">
+        @Html.HiddenFor(model => model.idAssessment)
+
+        <div class="form-group" hidden>
             @Html.LabelFor(model => model.done360, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.done360)
-=======
-        <div class="form-group" hidden>
-            @Html.LabelFor(model => model.done360, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.CheckBoxFor(model => model.done360, new { @disabled = "disabled", @readonly = "readonly" })
->>>>>>> Stashed changes
                     @Html.ValidationMessageFor(model => model.done360, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
-
-<<<<<<< Updated upstream
-        <div class="form-group">
-            @Html.LabelFor(model => model.doneSelf, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.doneSelf)
-=======
+         
         <div class="form-group" hidden>
             @Html.LabelFor(model => model.doneSelf, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.CheckBoxFor(model => model.doneSelf, new { @disabled="disabled", @readonly = "readonly" })
->>>>>>> Stashed changes
+                    @Html.EditorFor(model => model.doneSelf)
                     @Html.ValidationMessageFor(model => model.doneSelf, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
 
-<<<<<<< Updated upstream
         <div class="form-group">
             @Html.LabelFor(model => model.resultAssesment, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.resultAssesment, new { htmlAttributes = new { @class = "form-control" } })
-=======
-        <div class="form-group" >
-            @Html.LabelFor(model => model.resultAssesment, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.resultAssesment, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled", @readonly = "readonly" } })
->>>>>>> Stashed changes
+                @Html.EditorFor(model => model.resultAssesment, new { htmlAttributes = new { @class = "form-control" }})
                 @Html.ValidationMessageFor(model => model.resultAssesment, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" hidden>
             @Html.LabelFor(model => model.scoreGlobal, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-<<<<<<< Updated upstream
                 @Html.EditorFor(model => model.scoreGlobal, new { htmlAttributes = new { @class = "form-control" } })
-=======
-                @Html.EditorFor(model => model.scoreGlobal, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled", @readonly = "readonly", default_value = "0" ,placeholder = "0" } })
->>>>>>> Stashed changes
                 @Html.ValidationMessageFor(model => model.scoreGlobal, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" hidden>
             @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-<<<<<<< Updated upstream
-                @Html.EditorFor(model => model.type, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.type, "", new { @class = "text-danger" })
-=======
                 <select class="form-control" id="type" name="type">
                     <option>Project_end</option>
                     <option>Yearly</option>
                     <option>Half_yearly</option>
                 </select>
->>>>>>> Stashed changes
             </div>
         </div>
 
-        <div class="form-group">
-<<<<<<< Updated upstream
-            @Html.LabelFor(model => model.employee_idEmployee, "employee_idEmployee", htmlAttributes: new { @class = "control-label col-md-2" })
-=======
+        <div class="form-group" hidden>
             @Html.LabelFor(model => model.employee, "employee", htmlAttributes: new { @class = "control-label col-md-2" })
->>>>>>> Stashed changes
             <div class="col-md-10">
                 @Html.DropDownList("employee_idEmployee", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.employee_idEmployee, "", new { @class = "text-danger" })
@@ -111,8 +73,9 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
+
         </div>
     </div>
 }

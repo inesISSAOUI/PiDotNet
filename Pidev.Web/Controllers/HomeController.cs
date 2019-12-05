@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Pidev.Web.Controllers
+namespace Advyteam.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿@model Advyteam.Models.assessment
+=======
+﻿@model Domain.Entities.assessment
+>>>>>>> Stashed changes
 
 @{
     ViewBag.Title = "Edit";
@@ -10,6 +14,7 @@
 {
     @Html.AntiForgeryToken()
     
+<<<<<<< Updated upstream
     <div class="form-horizontal">
         <h4>assessment</h4>
         <hr />
@@ -74,6 +79,76 @@
             </div>
         </div>
     </div>
+=======
+<div class="form-horizontal">
+    <h4>assessment</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.idAssessment)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.done360, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.done360)
+                @Html.ValidationMessageFor(model => model.done360, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.doneSelf, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.doneSelf)
+                @Html.ValidationMessageFor(model => model.doneSelf, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.resultAssesment, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.resultAssesment, new { htmlAttributes = new { @class = "form-control" }, disabled = "disabled", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.resultAssesment, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.scoreGlobal, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.scoreGlobal, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.scoreGlobal, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <select class="form-control" id="type" name="type">
+                <option>Project_end</option>
+                <option>Yearly</option>
+                <option>Half_yearly</option>
+            </select>
+           </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.employee, "employee", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("employee_idEmployee", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.employee_idEmployee, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+
+    </div>
+</div>
+>>>>>>> Stashed changes
 }
 
 <div>
